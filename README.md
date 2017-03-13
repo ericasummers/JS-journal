@@ -49,3 +49,6 @@
 * Add watcher to serve task to monitor development js files and run jsBuild on changes, create jsBuild task
 * Add watcher for bower files
 * Add watcher for html files to reload server every time html pages are updated
+
+* Keep API keys separate in a local .env file, add .env to .gitignore and require link on js
+* Include instructions on readme to create .env with unique API key
