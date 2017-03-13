@@ -6,7 +6,7 @@ function Entry(title, body) {
 Entry.prototype.countWords = function() {
   var totalWords = this.body.split(" ").length;
   return totalWords;
-}
+};
 
 Entry.prototype.vowelCount = function() {
   var vowels = ["a", "e", "i", "o", "u"];
@@ -20,7 +20,7 @@ Entry.prototype.vowelCount = function() {
     }
   }
   return vowelCount;
-}
+};
 
 Entry.prototype.consonantCount = function() {
   var consonants = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"];
@@ -34,7 +34,7 @@ Entry.prototype.consonantCount = function() {
     }
   }
   return consonantCount;
-}
+};
 
 Entry.prototype.getTeaser = function() {
   var sentences = this.body.split(".");
@@ -50,25 +50,6 @@ Entry.prototype.getTeaser = function() {
     teaserSentence = teaserSentence.join(" ");
   }
   return teaserSentence;
-}
+};
 
-
-$(document).ready(function() {
-  $("#submit-entry").submit(function(event) {
-    event.preventDefault();
-
-    var entryTitle = $("#title").val();
-    var entryBody = $("#body").val();
-
-    var newEntry = new Entry(entryTitle, entryBody);
-    var wordCount = newEntry.countWords();
-    var vowelCount = newEntry.vowelCount();
-    var consonantCount = newEntry.consonantCount();
-    var teaserSentence = newEntry.getTeaser();
-
-    $("#journal-entries").prepend("<li>" + entryTitle + " (wordcount: " + wordCount + "): <br>"
-    + "Teaser: " + teaserSentence + "<br>"
-     + entryBody + ". This contains " + vowelCount + " vowels and " + consonantCount + " consonants.</li>");
-
-  });
-});
+exports.entryModule = Entry;
