@@ -12,13 +12,13 @@ $(document).ready(function() {
   $("#submit-entry").submit(function(event) {
     event.preventDefault();
 
-    var title = $("#title").val();
-    var body = $("body").val();
+    var entryTitle = $("#title").val();
+    var entryBody = $("#body").val();
 
-    var newEntry = new Entry(title, body);
-    var wordCount = newEntry.countWords();
+    var newEntry = new Entry(entryTitle, entryBody);
+    var wordCount = newEntry.countWords(entryBody);
 
-    $("#journal-entries").prepend("<li>" + title + " (wordcount: " + wordCount + "): " + body + "</li>");
+    $("#journal-entries").prepend("<li>" + entryTitle + " (wordcount: " + wordCount + "): " + entryBody + "</li>");
 
   });
 });
