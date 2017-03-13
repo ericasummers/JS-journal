@@ -37,7 +37,19 @@ Entry.prototype.consonantCount = function() {
 }
 
 Entry.prototype.getTeaser = function() {
-
+  var sentences = this.body.split(".");
+  var teaserSentence = [];
+  var firstSentenceWords = sentences[0].split(" ");
+  var sentenceWordCount = firstSentenceWords.length;
+  if (sentenceWordCount <= 8) {
+    teaserSentence.push(sentences[0]);
+  } else {
+    for (var i = 0; i < 8; i++) {
+      teaserSentence.push(firstSentenceWords[i]);
+    }
+    teaserSentence = teaserSentence.join(" ");
+  }
+  return teaserSentence;
 }
 
 
@@ -52,8 +64,11 @@ $(document).ready(function() {
     var wordCount = newEntry.countWords();
     var vowelCount = newEntry.vowelCount();
     var consonantCount = newEntry.consonantCount();
+    var teaserSentence = newEntry.getTeaser();
 
-    $("#journal-entries").prepend("<li>" + entryTitle + " (wordcount: " + wordCount + "): " + entryBody + ". This contains " + vowelCount + " vowels and " + consonantCount + " consonants.</li>");
+    $("#journal-entries").prepend("<li>" + entryTitle + " (wordcount: " + wordCount + "): <br>"
+    + "Teaser: " + teaserSentence + "<br>"
+     + entryBody + ". This contains " + vowelCount + " vowels and " + consonantCount + " consonants.</li>");
 
   });
 });
