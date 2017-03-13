@@ -42,3 +42,9 @@
 * Update library require to locate bootstrap packages
 * Create gulp task to combine bower JS and CSS
 * Update build task to include bower start
+
+* Install BrowserSync for development server with command `npm install browser-sync --save-dev`
+* Require BrowserSync on gulpfile and create serve task
+* Run `gulp serve` from top level project directory to launch server and run app
+* Add watcher to serve task to monitor development js files and run jsBuild on changes, create jsBuild task
+* Add watcher for bower files
