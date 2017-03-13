@@ -3,7 +3,7 @@
 * Create initial scripts pages and html, separate interface and business logic.
 * Link interface and business logic with module and require statements.
 * Create .gitignore file for node_modules and DS_Store
-* Set up and initialize npm: `npm init`
+* Set up and initialize npm: `npm init` which creates package.json
 * Enter title to set up gulpfile and hit enter.
 * Install gulp with command `npm install gulp --save-dev`
 * Install Browserify with command `npm install browserify --save-dev`
@@ -22,3 +22,23 @@
 * Set up JSHint to lint by using command `npm install jshint --save-dev` and `npm install gulp-jshint --save-dev`
 * Create task to lint js files with jshint
 * Run `gulp jshint` to check for errors/problems in js code
+* Run `gulp build` or `gulp build --production` to run gulp and create app.js file
+
+* Set up Bower with command `npm install bower -g`
+* Initialize bower with command `bower init` to create bower.json
+* Install jquery through bower with the command `bower install jquery --save`
+* Install bower packages with command `bower install`
+* Add bower_components folder to gitignore and update jquery scripts link to go to bower_components folder
+* Install bootstrap with command `bower install bootstrap --save`
+* Link to bootstrap on html page after jquery
+* Install moment.js through bower with command `bower install moment --save`
+* Link to moment.js on html file with script tag
+
+* Install gulp package 'bower-files' with command `npm install bower-files --save-dev`
+* Set up bower-files package on gulpfile and create task to store dependencies and combine into one vendor.js file
+* Run `gulp bowerJS` to add new Javascript front-end dependencies
+* Add build and tmp folders to gitignore
+* Add CSS link and CSS task to gulpfile
+* Update library require to locate bootstrap packages
+* Create gulp task to combine bower JS and CSS
+* Update build task to include bower start
