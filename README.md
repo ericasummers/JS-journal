@@ -48,3 +48,4 @@
 * Run `gulp serve` from top level project directory to launch server and run app
 * Add watcher to serve task to monitor development js files and run jsBuild on changes, create jsBuild task
 * Add watcher for bower files
+* Add watcher for html files to reload server every time html pages are updated
