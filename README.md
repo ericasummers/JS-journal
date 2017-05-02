@@ -1,4 +1,34 @@
-##Javascript Project Setup
+##Javascript Journal
+
+#### By _**Erica Wright & Maggie Harrington**_
+
+## Description
+
+_A web app using a Javascript Framework to create a journal._
+
+## Setup/Installation Requirements
+
+* _Clone this repository and open index.html in your browser. If you would rather use the commandline then change directory into the top level of the cloned repository and then, for mac run the following command in your terminal: open index.html. For a PC run start index.html"._
+
+## Known Bugs
+
+_No known bugs at this time._
+
+## Support and contact details
+
+_If you run into any problems then let me know or feel free to contribute to the code._
+
+## Technologies Used
+
+_HTML_
+_JavaScipt_
+_jQuery_
+
+### License
+
+Copyright (c) 2017 **_Erica Wright & Maggie Harrington_**
+
+##Project Setup
 
 * Create initial scripts pages and html, separate interface and business logic.
 * Link interface and business logic with module and require statements.
